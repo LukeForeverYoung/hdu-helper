@@ -1,0 +1,24 @@
+{
+    "manifest_version":2,
+    "name":"hdu helper",
+    "description": "null",
+    "version": "2.0",
+    "permissions":
+    [
+        "cookies", "tabs", "http://*/*", "https://*/*","storage"
+    ],
+    "browser_action":
+    {
+        "default_icon": "icon.png"
+        
+    },
+    "content_scripts": 
+    [
+        {
+            "all_frames": true,
+            "matches": ["http://acm.hdu.edu.cn/*"],
+            "js": ["clipboard.min.js","func.js"],
+            "run_at":"document_end"
+        }
+    ]
+}
